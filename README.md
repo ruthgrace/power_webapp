@@ -10,7 +10,7 @@ This can be used for designing RNAseq experiments, metagenomic gene catalog expe
 
 To run the app, type the following command into R:
 ```
-shiny::runApp() in R
+shiny::runApp()
 ```
 
 ##Dependencies
