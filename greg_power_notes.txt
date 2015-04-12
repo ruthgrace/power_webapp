@@ -1,0 +1,39 @@
+post hoc power analysis
+
+for aldex - can do per gene basis
+adding in something elese doesn't change results of remainder
+
+you take your existing experiment
+
+add in dummy gene make it 1x and 1.5x in your two conditions - see if it comes up as significant
+can change it to see at what fold difference you can detect
+and what abundance you need
+
+set up 10 mock genes that had base count between 1 and 100 (use powers of two)
+looked at fold changes 16, 8, 4, 2, 1
+
+perform random sample from dirichlet
+(so when it's 1X, it's 1Xdirichlet sampling)
+
+perform aldex to randomly sampled input
+
+* no biological variation, only technical variation
+
+*CAN BE DONE WITH ENTIRELY FAKE DATA - can use power law or they can be uniform or whatever
+can model your experiment so that if you have 10,000 reads, whats your power, whatabout with 100,000 or 1,000,000 reads?
+
+mirror the differential abundances so that sums are the same in both onditions
+
+
+
+
+how to calculate sum(h)
+
+
+
+
+
+
+
+
+mock HMP data set ?
