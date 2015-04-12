@@ -14,10 +14,10 @@ shinyUI(fluidPage(
   sidebarPanel(
         h4("Number of samples"),
         sliderInput("n", "Number of samples in control or experimental condition",
-        2, 100, 5, step = 1)
-        br()
-        p("Click the button to perform the power simulation. This may take a long time depending on how large your data set is.")
-        actionButton("goButton", "Go!"),
+        2, 100, 5, step = 1),
+        br(),
+        p("Click the button to perform the power simulation. This may take a long time depending on how large your data set is."),
+        actionButton("goButton", "Go!")
     ),
   mainPanel(
     fluidRow(
@@ -29,7 +29,7 @@ shinyUI(fluidPage(
       wellPanel(
           span(textOutput("fp005Text"),
             textOutput("nFalsePositives005")
-          )
+          ),
           span(textOutput("fp01Text"),
             textOutput("nFalsePositives01")
           )
