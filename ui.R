@@ -15,6 +15,9 @@ shinyUI(fluidPage(
         h4("Number of samples"),
         sliderInput("n", "Number of samples in control or experimental condition",
         2, 100, 5, step = 1)
+        br()
+        p("Click the button to perform the power simulation. This may take a long time depending on how large your data set is.")
+        actionButton("goButton", "Go!"),
     ),
   mainPanel(
     fluidRow(
@@ -24,10 +27,10 @@ shinyUI(fluidPage(
     ),
     fluidRow(
       wellPanel(
-          span("Number of false positives at 0.05 q-value with Benjamini-Hochberg multiple test correction:",
+          span(textOutput("fp005Text"),
             textOutput("nFalsePositives005")
           )
-          span("Number of false positives at 0.1 q-value with Benjamini-Hochberg multiple test correction:",
+          span(textOutput("fp01Text"),
             textOutput("nFalsePositives01")
           )
         )

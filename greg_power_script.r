@@ -5,6 +5,8 @@
 #do this on a 5x5 dataset for good power
 
 
+#this script was originally written by Dr. Greg Gloor, but has been completely munged by Ruth.
+
 options(error=recover)
 
 
