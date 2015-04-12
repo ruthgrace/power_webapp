@@ -10,25 +10,25 @@ actionLink <- function(inputId, ...) {
 }
 
 shinyUI(fluidPage(
-  titlePanel("Variance and Read Count"),
+  titlePanel("Simulate power for a hypothetical count table experiment"),
   sidebarPanel(
-        h4("Sparsity Filter"),
-        sliderInput("reviews", "Minimum number of reads per OTU",
-        0, 100, 50, step = 10)
+        h4("Number of samples"),
+        sliderInput("n", "Number of samples in control or experimental condition",
+        2, 100, 5, step = 1)
     ),
   mainPanel(
     fluidRow(
-      column(6,
-        plotOutput("plot1")
-      ),
-      column(6,
-        plotOutput("plot2")
+      column(12,
+        plotOutput("heatmap")
       )
     ),
     fluidRow(
       wellPanel(
-          span("Minimum counts per OTU across all samples:",
-            textOutput("sparsityFilter")
+          span("Number of false positives at 0.05 q-value with Benjamini-Hochberg multiple test correction:",
+            textOutput("nFalsePositives005")
+          )
+          span("Number of false positives at 0.1 q-value with Benjamini-Hochberg multiple test correction:",
+            textOutput("nFalsePositives01")
           )
         )
     )
